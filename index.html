@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts/Grtsk-Regular.ttf">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background-image: url('./yuj_planning_bg_desktop.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #333;
+            justify-content: flex-end;
+        }
+
+        .column {
+            flex: 1;
+            box-sizing: border-box;
+            height: 100vh;
+            max-width: 710px;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 800px) {
+            body {
+                flex-direction: column;
+                background-image: url('./yuj_planning_bg_mobile.png');
+            }
+
+            .column {
+                max-width: 100vw;
+                max-width: 100dvw;
+            }
+        }
+
+        @font-face {
+            font-family: "TRY Grtsk", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            src:
+                url('fonts/Grtsk-Regular.ttf') format("truetype");
+        }
+    </style>
+
+</head>
+
+<body>
+    <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { !typeof window.BsportWidget !== "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.staging.bsport.io/scripts/widget.js")</script>
+    <script id="bsport-widget-mount">
+        function MountBsportWidget(config, repeat = 1) {
+            if (repeat > 50) { return }
+            if (!window.BsportWidget) {
+                return setTimeout(() => {
+                    MountBsportWidget(config, repeat + 1)
+                }, 100 * repeat || 1)
+            }
+            BsportWidget.mount(config)
+        }
+    </script>
+    <script>
+        MountBsportWidget({
+            "parentElement": "bsport-widget-138524",
+            "companyId": 1082,
+            "franchiseId": null,
+            "dialogMode": 1,
+            "widgetType": "calendar",
+            "showFab": false,
+            "fullScreenPopup": false,
+            "styles": undefined,
+            "config": {
+                "calendar": {
+                    "todayOnly": false,
+                    "compactMode": true
+                }
+            }
+        })
+    </script>
+    <div class="column">
+    </div>
+    <div class='column' id="bsport-widget-138524"></div>
+</body>
+
+</html>
